@@ -10,26 +10,19 @@ html
     link(rel='icon' href='img/favicon.ico')
     link(rel='stylesheet' href='css/base.css')
     link(rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:400,500')
+    script(src='https://cdn.mlkcca.com/v2.0.0/milkcocoa.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/bacon.js/0.7.73/Bacon.min.js')
+    script(src="js/jquery.js")
+    script(src="https://cdn.auth0.com/js/lock-7.12.min.js")
+    script(src="js/base.js")
+    script(src="https://apis.google.com/js/client.js?onload=checkAuth")
   body
     .remocon
       .reactions.login
         .login-box: button.rbtn.login(value='login') Login
       .reactions.detect.showing
         h1 Hello, 
-          span.nickname ladicle
+          span.nickname .
           span !
-        .reaction-box: button.rbtn.reaction(value='no') No
-        .reaction-box: button.rbtn.reaction(value='yes') Yes
-
-    script(src='https://cdn.mlkcca.com/v2.0.0/milkcocoa.js')
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js')
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/bacon.js/0.7.73/Bacon.min.js')
-    script(src="dst/js/jquery.js")
-    script(src="https://cdn.auth0.com/js/lock-7.12.min.js")
-    script(src="dst/js/base.js")
-    script.
-      if ('addEventListener' in document) {
-        document.addEventListener('DOMContentLoaded', function() {
-          FastClick.attach(document.body);
-        }, false);
-      }
+        .reaction-box: button.rbtn.reaction(value='pic') Picture
+        .reaction-box: button.rbtn.reaction(value='hair') Hair
