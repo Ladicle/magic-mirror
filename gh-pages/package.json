@@ -1,0 +1,26 @@
+{
+  "name": "magic-mirror",
+  "version": "1.0.0",
+  "description": "Yahoo Open Hackday 4 #62",
+  "main": "gulpfile.babel.js",
+  "dependencies": {
+    "babel": "^5.8.23",
+    "babel-core": "^5.8.25",
+    "browser-sync": "^2.9.11",
+    "express": "^4.13.4",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-babel": "^5.2.1",
+    "gulp-jade": "^1.1.0",
+    "gulp-load-plugins": "^0.10.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-stylus": "^2.1.0",
+    "marked": "^0.3.5",
+    "shower-core": "^1.0.7"
+  },
+  "keywords": [
+    "IoT"
+  ],
+  "author": "ladicle",
+  "license": "MIT"
+}

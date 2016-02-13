@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  header
+    div#weather
+      div#today-weather
+        p#temperature.big-font 24°
+        img(src="images/sun-and-rain.png" alt="weather")
+        hr.clear
+      div#tomorrow-weather
+        p Tomorrow morning is
+        p sometimes rain cloudy
+
+    div#date
+      p#time.big-font=time
+      p#week=week
+      p#day=date
+
+  div#content
+    p Not logined.
+
+  script(src="javascripts/jquery.js")
+  script(src="javascripts/base.js")

@@ -9,3 +9,7 @@
    npm install
    gulp
    #+END_SRC
+
+** Link
+   - [[http://ladicle.github.io/magic-mirror/gh-pages/qr.html][QRcode]] : access to mobile page.
+

@@ -8,7 +8,7 @@ gulp.task('babel', () => {
   gulp.src('./src/js/*.js')
     .pipe($.plumber())
     .pipe($.babel())
-    .pipe(gulp.dest('./dst/js'));
+    .pipe(gulp.dest('./js'));
 });
 
 gulp.task('stylus', () => {
@@ -16,7 +16,7 @@ gulp.task('stylus', () => {
     .pipe($.plumber())
     .pipe($.stylus())
     .pipe($.autoprefixer('last 2 version'))
-    .pipe(gulp.dest('./dst/css'))
+    .pipe(gulp.dest('./css'))
     .pipe(browserSync.reload({stream: true, once: true}))
     ;
 });
@@ -43,4 +43,4 @@ gulp.task('watch', () => {
 });
 
 gulp.task('build', ['babel', 'stylus', 'jade']);
-gulp.task('default', ['serve', 'build', 'watch']);2
+gulp.task('default', ['serve', 'build', 'watch']);

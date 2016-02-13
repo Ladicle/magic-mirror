@@ -3,3 +3,4 @@
 
 # npm ( exclusion shower packages )
 node_modules/*
+gh-pages/node_modules/*
