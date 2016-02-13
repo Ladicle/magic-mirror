@@ -1,0 +1,22 @@
+accentColor = #FFA100
+
+a
+  color accentColor
+  transition color .1s ease-in-out
+
+.spase-shadow
+  text-shadow 0 10px 0 rgba(0, 0, 0, 0.3)
+
+.blur-image
+  filter blur(.6px) brightness(.6)
+  -webkit-filter blur(.8px) brightness(.6)
+
+[layout=code] .hljs-comment
+  color #555
+
+[layout][invert] a:link,
+[layout][invert] a:visited,
+[layout][invert] a:active
+  color accentColor
+[layout][invert] a:hover
+  color lighten(accentColor, 50%)

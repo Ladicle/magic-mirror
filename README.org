@@ -1,0 +1,11 @@
+* Magic Mirror
+  This is magic mirror UI.
+
+** File Structure
+   - images: graphics used in the slide
+  
+** Usage
+   #+BEGIN_SRC shell
+   npm install
+   gulp
+   #+END_SRC

@@ -1,0 +1,5 @@
+# OSX
+.DS_STORE
+
+# npm ( exclusion shower packages )
+node_modules/*

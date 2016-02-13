@@ -1,0 +1,16 @@
+- title='Magic Mirror'
+- author='ladicle'
+- fullname='Aya Igarashi'
+
+doctype html
+html
+  head
+    title #{title} @#{author}
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=792, user-scalable=no')
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
+    link(rel='stylesheet' href='dst/css/base.css')
+  body
+    header
+      h1 #{title}
+      p @#{author}
