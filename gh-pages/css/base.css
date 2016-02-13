@@ -1,48 +1,22 @@
+html {
+  font-size: 250%;
+}
 body {
   width: 100%;
   height: 100%;
-  color: #fff;
-  background: #000;
+  margin: 0;
+  padding: 0;
+  background: #3d3636;
+  color: #f2f2f2;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
-  font-weight: 300;
-  font-size: 30px;
 }
 hr {
   border-color: #000;
-}
-p {
-  margin: 0;
-  padding: 0;
-}
-header {
-  width: 100%;
-}
-.big-font {
-  font-size: 130px;
-}
-.clear {
-  clear: both;
-  border-color: #000;
-}
-#weather {
-  float: left;
-  padding: 50px 0px 0px 60px;
-}
-#temperature {
-  float: left;
-}
-#today-weather img {
-  margin: 40px 0px 0px 10px;
-}
-#date {
-  text-align: right;
-  float: right;
-  padding: 50px 80px 0px 0px;
-}
-#content {
-  clear: both;
-  width: 100%;
-  padding: 60px;
 }
 #qrcode {
   position: absolute;
@@ -58,4 +32,118 @@ header {
   margin: auto;
   max-width: 100%;
   max-height: 100%;
+}
+.remocon {
+  margin: 48% auto;
+}
+.remocon > *:not(.showing) {
+  display: none;
+}
+.reactions::after {
+  clear: both;
+  display: block;
+  content: '';
+}
+.login-box {
+  margin: auto;
+  width: 50%;
+  padding-top: 50%;
+  margin-left: 25%;
+  position: relative;
+  float: left;
+  overflow: hidden;
+}
+.login-box:nth-of-type(1) {
+  background: #ed5552;
+}
+.login-box:nth-of-type(1) .rbtn {
+  box-shadow: 1px 1px #bf4341, 2px 2px #bf4341, 3px 3px #bf4341, 4px 4px #bf4341, 5px 5px #bf4341, 6px 6px #bf4341, 7px 7px #bf4341, 8px 8px #bf4341, 9px 9px #bf4341, 10px 10px #bf4341, 11px 11px #bf4341, 12px 12px #bf4341, 13px 13px #bf4341, 14px 14px #bf4341, 15px 15px #bf4341, 16px 16px #bf4341, 17px 17px #bf4341, 18px 18px #bf4341, 19px 19px #bf4341, 20px 20px #bf4341, 21px 21px #bf4341, 22px 22px #bf4341, 23px 23px #bf4341, 24px 24px #bf4341, 25px 25px #bf4341, 26px 26px #bf4341, 27px 27px #bf4341, 28px 28px #bf4341, 29px 29px #bf4341, 30px 30px #bf4341, 31px 31px #bf4341, 32px 32px #bf4341, 33px 33px #bf4341, 34px 34px #bf4341, 35px 35px #bf4341, 36px 36px #bf4341, 37px 37px #bf4341, 38px 38px #bf4341, 39px 39px #bf4341, 40px 40px #bf4341, 41px 41px #bf4341, 42px 42px #bf4341, 43px 43px #bf4341, 44px 44px #bf4341, 45px 45px #bf4341, 46px 46px #bf4341, 47px 47px #bf4341, 48px 48px #bf4341, 49px 49px #bf4341, 50px 50px #bf4341, 51px 51px #bf4341, 52px 52px #bf4341, 53px 53px #bf4341, 54px 54px #bf4341, 55px 55px #bf4341, 56px 56px #bf4341, 57px 57px #bf4341, 58px 58px #bf4341, 59px 59px #bf4341, 60px 60px #bf4341;
+  text-shadow: 1px 1px #749039, 2px 2px #749039, 3px 3px #749039, 4px 4px #749039, 5px 5px #749039, 6px 6px #749039, 7px 7px #749039, 8px 8px #749039, 9px 9px #749039, 10px 10px #749039, 11px 11px #749039, 12px 12px #749039, 13px 13px #749039, 14px 14px #749039, 15px 15px #749039, 16px 16px #749039, 17px 17px #749039, 18px 18px #749039, 19px 19px #749039, 20px 20px #749039, 21px 21px #749039, 22px 22px #749039, 23px 23px #749039, 24px 24px #749039, 25px 25px #749039, 26px 26px #749039, 27px 27px #749039, 28px 28px #749039, 29px 29px #749039, 30px 30px #749039, 31px 31px #749039, 32px 32px #749039, 33px 33px #749039, 34px 34px #749039, 35px 35px #749039, 36px 36px #749039, 37px 37px #749039, 38px 38px #749039, 39px 39px #749039, 40px 40px #749039, 41px 41px #749039, 42px 42px #749039, 43px 43px #749039, 44px 44px #749039, 45px 45px #749039, 46px 46px #749039, 47px 47px #749039, 48px 48px #749039, 49px 49px #749039, 50px 50px #749039, 51px 51px #749039, 52px 52px #749039, 53px 53px #749039, 54px 54px #749039, 55px 55px #749039, 56px 56px #749039, 57px 57px #749039, 58px 58px #749039, 59px 59px #749039, 60px 60px #749039;
+  background: #94ba49;
+  font-size: 3.4rem;
+}
+.login-box .rbtn {
+  padding: 0;
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  width: 72%;
+  height: 72%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 50%;
+  background: #f00;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+}
+.login-box .rbtn:active {
+  -webkit-transform: scale(0.93);
+          transform: scale(0.93);
+}
+.reaction-box {
+  width: 50%;
+  padding-top: 50%;
+  position: relative;
+  float: left;
+  overflow: hidden;
+}
+.reaction-box:nth-of-type(1) {
+  background: #ed5552;
+}
+.reaction-box:nth-of-type(1) .rbtn {
+  box-shadow: 1px 1px #bf4341, 2px 2px #bf4341, 3px 3px #bf4341, 4px 4px #bf4341, 5px 5px #bf4341, 6px 6px #bf4341, 7px 7px #bf4341, 8px 8px #bf4341, 9px 9px #bf4341, 10px 10px #bf4341, 11px 11px #bf4341, 12px 12px #bf4341, 13px 13px #bf4341, 14px 14px #bf4341, 15px 15px #bf4341, 16px 16px #bf4341, 17px 17px #bf4341, 18px 18px #bf4341, 19px 19px #bf4341, 20px 20px #bf4341, 21px 21px #bf4341, 22px 22px #bf4341, 23px 23px #bf4341, 24px 24px #bf4341, 25px 25px #bf4341, 26px 26px #bf4341, 27px 27px #bf4341, 28px 28px #bf4341, 29px 29px #bf4341, 30px 30px #bf4341, 31px 31px #bf4341, 32px 32px #bf4341, 33px 33px #bf4341, 34px 34px #bf4341, 35px 35px #bf4341, 36px 36px #bf4341, 37px 37px #bf4341, 38px 38px #bf4341, 39px 39px #bf4341, 40px 40px #bf4341, 41px 41px #bf4341, 42px 42px #bf4341, 43px 43px #bf4341, 44px 44px #bf4341, 45px 45px #bf4341, 46px 46px #bf4341, 47px 47px #bf4341, 48px 48px #bf4341, 49px 49px #bf4341, 50px 50px #bf4341, 51px 51px #bf4341, 52px 52px #bf4341, 53px 53px #bf4341, 54px 54px #bf4341, 55px 55px #bf4341, 56px 56px #bf4341, 57px 57px #bf4341, 58px 58px #bf4341, 59px 59px #bf4341, 60px 60px #bf4341;
+  text-shadow: 1px 1px #749039, 2px 2px #749039, 3px 3px #749039, 4px 4px #749039, 5px 5px #749039, 6px 6px #749039, 7px 7px #749039, 8px 8px #749039, 9px 9px #749039, 10px 10px #749039, 11px 11px #749039, 12px 12px #749039, 13px 13px #749039, 14px 14px #749039, 15px 15px #749039, 16px 16px #749039, 17px 17px #749039, 18px 18px #749039, 19px 19px #749039, 20px 20px #749039, 21px 21px #749039, 22px 22px #749039, 23px 23px #749039, 24px 24px #749039, 25px 25px #749039, 26px 26px #749039, 27px 27px #749039, 28px 28px #749039, 29px 29px #749039, 30px 30px #749039, 31px 31px #749039, 32px 32px #749039, 33px 33px #749039, 34px 34px #749039, 35px 35px #749039, 36px 36px #749039, 37px 37px #749039, 38px 38px #749039, 39px 39px #749039, 40px 40px #749039, 41px 41px #749039, 42px 42px #749039, 43px 43px #749039, 44px 44px #749039, 45px 45px #749039, 46px 46px #749039, 47px 47px #749039, 48px 48px #749039, 49px 49px #749039, 50px 50px #749039, 51px 51px #749039, 52px 52px #749039, 53px 53px #749039, 54px 54px #749039, 55px 55px #749039, 56px 56px #749039, 57px 57px #749039, 58px 58px #749039, 59px 59px #749039, 60px 60px #749039;
+  background: #94ba49;
+  font-size: 3.4rem;
+}
+.reaction-box:nth-of-type(2) {
+  background: #92defe;
+}
+.reaction-box:nth-of-type(2) .rbtn {
+  box-shadow: 1px 1px #79b6d3, 2px 2px #79b6d3, 3px 3px #79b6d3, 4px 4px #79b6d3, 5px 5px #79b6d3, 6px 6px #79b6d3, 7px 7px #79b6d3, 8px 8px #79b6d3, 9px 9px #79b6d3, 10px 10px #79b6d3, 11px 11px #79b6d3, 12px 12px #79b6d3, 13px 13px #79b6d3, 14px 14px #79b6d3, 15px 15px #79b6d3, 16px 16px #79b6d3, 17px 17px #79b6d3, 18px 18px #79b6d3, 19px 19px #79b6d3, 20px 20px #79b6d3, 21px 21px #79b6d3, 22px 22px #79b6d3, 23px 23px #79b6d3, 24px 24px #79b6d3, 25px 25px #79b6d3, 26px 26px #79b6d3, 27px 27px #79b6d3, 28px 28px #79b6d3, 29px 29px #79b6d3, 30px 30px #79b6d3, 31px 31px #79b6d3, 32px 32px #79b6d3, 33px 33px #79b6d3, 34px 34px #79b6d3, 35px 35px #79b6d3, 36px 36px #79b6d3, 37px 37px #79b6d3, 38px 38px #79b6d3, 39px 39px #79b6d3, 40px 40px #79b6d3, 41px 41px #79b6d3, 42px 42px #79b6d3, 43px 43px #79b6d3, 44px 44px #79b6d3, 45px 45px #79b6d3, 46px 46px #79b6d3, 47px 47px #79b6d3, 48px 48px #79b6d3, 49px 49px #79b6d3, 50px 50px #79b6d3, 51px 51px #79b6d3, 52px 52px #79b6d3, 53px 53px #79b6d3, 54px 54px #79b6d3, 55px 55px #79b6d3, 56px 56px #79b6d3, 57px 57px #79b6d3, 58px 58px #79b6d3, 59px 59px #79b6d3, 60px 60px #79b6d3;
+  text-shadow: 1px 1px #bf4341, 2px 2px #bf4341, 3px 3px #bf4341, 4px 4px #bf4341, 5px 5px #bf4341, 6px 6px #bf4341, 7px 7px #bf4341, 8px 8px #bf4341, 9px 9px #bf4341, 10px 10px #bf4341, 11px 11px #bf4341, 12px 12px #bf4341, 13px 13px #bf4341, 14px 14px #bf4341, 15px 15px #bf4341, 16px 16px #bf4341, 17px 17px #bf4341, 18px 18px #bf4341, 19px 19px #bf4341, 20px 20px #bf4341, 21px 21px #bf4341, 22px 22px #bf4341, 23px 23px #bf4341, 24px 24px #bf4341, 25px 25px #bf4341, 26px 26px #bf4341, 27px 27px #bf4341, 28px 28px #bf4341, 29px 29px #bf4341, 30px 30px #bf4341, 31px 31px #bf4341, 32px 32px #bf4341, 33px 33px #bf4341, 34px 34px #bf4341, 35px 35px #bf4341, 36px 36px #bf4341, 37px 37px #bf4341, 38px 38px #bf4341, 39px 39px #bf4341, 40px 40px #bf4341, 41px 41px #bf4341, 42px 42px #bf4341, 43px 43px #bf4341, 44px 44px #bf4341, 45px 45px #bf4341, 46px 46px #bf4341, 47px 47px #bf4341, 48px 48px #bf4341, 49px 49px #bf4341, 50px 50px #bf4341, 51px 51px #bf4341, 52px 52px #bf4341, 53px 53px #bf4341, 54px 54px #bf4341, 55px 55px #bf4341, 56px 56px #bf4341, 57px 57px #bf4341, 58px 58px #bf4341, 59px 59px #bf4341, 60px 60px #bf4341;
+  background: #ed5552;
+  font-size: 3.2rem;
+}
+.reaction-box .rbtn {
+  padding: 0;
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  width: 72%;
+  height: 72%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 50%;
+  background: #f00;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+}
+.reaction-box .rbtn:active {
+  -webkit-transform: scale(0.93);
+          transform: scale(0.93);
 }

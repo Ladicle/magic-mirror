@@ -9,25 +9,25 @@ html
     meta(charset='utf-8')
     link(rel='icon' href='img/favicon.ico')
     link(rel='stylesheet' href='css/base.css')
-    link(rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:300,400')
+    link(rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:400,500')
   body
-    header
-      div#weather
-        div#today-weather
-          p#temperature.big-font 59°
-          img(src="./img/sun-and-rain.png" alt="weather")
-          hr.clear
-        div#tomorrow-weather
-          p Tomorrow morning is
-          p light raining
+    .remocon
+      .reactions
+        .login-box: button.rbtn.login(value='login') Login
+      .reactions
+        h1 Hello, ladicle!
+      .reactions.showing
+        .reaction-box: button.rbtn.reaction(value='no') No
+        .reaction-box: button.rbtn.reaction(value='yes') Yes
 
-      div#date
-        p#time.big-font 3:20
-        p#week Tuseday
-        p#day Juniary 32th
-
-    div#content
-      p Not logined.
-
+    script(src='https://cdn.mlkcca.com/v2.0.0/milkcocoa.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/bacon.js/0.7.73/Bacon.min.js')
     script(src="dst/js/jquery.js")
     script(src="dst/js/base.js")
+    script.
+      if ('addEventListener' in document) {
+        document.addEventListener('DOMContentLoaded', function() {
+          FastClick.attach(document.body);
+        }, false);
+      }
