@@ -1,7 +1,8 @@
 const CLIENT_ID = '714461968364-8ql5e5addflq8e0feudsr6k3humjp87d.apps.googleusercontent.com';
 const SCOPES = ["https://www.googleapis.com/auth/calendar.readonly", "profile"];
 const milkcocoa = new MilkCocoa('leadikkwvben.mlkcca.com');
-const ds = milkcocoa.dataStore('events');
+const events = milkcocoa.dataStore('events');
+const users = milkcocoa.dataStore('users');
 
 function checkAuth() {
   gapi.auth.authorize(
@@ -22,7 +23,9 @@ function handleAuthResult(authResult) {
 	  var code = authResult.code;
 
 	  // Send to milkcocoa
-	  ds.push({'user': {'id': id, 'email': email, 'name': name, 'code': code }});
+	  users.push({id: id, email: email, name: name, code: code }, function(err, value){
+	    console.log(value);
+	});
 	  $('.nickname').text(name);
       });
    });
@@ -51,7 +54,9 @@ $(function(){
 
     // Send events
     $('.reaction').click(function(){
-	ds.push({event: $(this).value});
+	events.push({event: $(this).value}, function(err, value){
+	    console.log(value);
+	});
     });
 })
 
