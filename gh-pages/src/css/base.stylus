@@ -58,7 +58,7 @@ hr
     clear: both
     display: block
     content: ''
-
+    
 .login-box
   margin: auto
   width: 50%
@@ -68,11 +68,11 @@ hr
   float: left
   overflow: hidden
   &:nth-of-type(1)
-    background: #ed5552
+    background: #92defe
     .rbtn
-      box-shadow: long-shadow(#bf4341)
-      text-shadow: long-shadow(#749039)
-      background: #94ba49
+      box-shadow: long-shadow(#79b6d3)
+      text-shadow: long-shadow(#bf4341)
+      background: #ed5552
       font-size: 3.4rem
   .rbtn
     btn-reset()

@@ -12,11 +12,12 @@ html
     link(rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:400,500')
   body
     .remocon
-      .reactions
+      .reactions.login
         .login-box: button.rbtn.login(value='login') Login
-      .reactions
-        h1 Hello, ladicle!
-      .reactions.showing
+      .reactions.detect.showing
+        h1 Hello, 
+          span.nickname ladicle
+          span !
         .reaction-box: button.rbtn.reaction(value='no') No
         .reaction-box: button.rbtn.reaction(value='yes') Yes
 
@@ -24,6 +25,7 @@ html
     script(src='https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/bacon.js/0.7.73/Bacon.min.js')
     script(src="dst/js/jquery.js")
+    script(src="https://cdn.auth0.com/js/lock-7.12.min.js")
     script(src="dst/js/base.js")
     script.
       if ('addEventListener' in document) {
