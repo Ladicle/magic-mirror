@@ -15,6 +15,7 @@
     "milkcocoa": "^0.4.1",
     "morgan": "~1.6.1",
     "restler": "^3.4.0",
-    "serve-favicon": "~2.3.0"
+    "serve-favicon": "~2.3.0",
+    "socket.io": "^1.4.5"
   }
 }

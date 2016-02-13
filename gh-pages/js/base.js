@@ -53,8 +53,8 @@ $(function () {
 
   // Send events
   $('.reaction').click(function () {
-    events.push({ event: $(this).value }, function (err, value) {
-      console.log(value);
+    events.push({ event: $(this).val() }, function (err, value) {
+      consol6e.log(value);
     });
   });
 });
