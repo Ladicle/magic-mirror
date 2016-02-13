@@ -6,6 +6,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     font-size: 30px;
+    overflow-x: hidden;
 }
 
 p {
@@ -48,5 +49,5 @@ header {
 #content {
     clear: both;
     width: 100%;
-    padding: 60px;
+    padding: 15px 60px;
 }

@@ -1,0 +1,55 @@
+<html>
+	<head>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+		<script type="text/javascript">
+
+		$.get("https://accounts.google.com/o/oauth2/auth?client_id=714461968364-8ql5e5addflq8e0feudsr6k3humjp87d.apps.googleusercontent.com&scope=https://www.googleapis.com/auth/calendar.readonly&response_type=code&access_type=offline", function(data){
+			console.log('oge')
+		});
+		
+			var clientId = '準備したClientID';
+var apiKey = '準備したAPI key';
+
+// とりあえず、怖いので、カレンダーを読むだけの設定
+// https://www.googleapis.com/auth/plus.meは不要かも。。
+
+var scopes = ['https://www.googleapis.com/auth/calendar.readonly', 'profile'];
+
+function handleClientLoad() {
+        // 予めAPI Consoleで設定したAPIキーを設定
+		gapi.auth.setToken("eyJhbGciOiJSUzI1NiIsImtpZCI6IjM4ZmZiNmRmOTJhMWJkNmJhOTUyZjA2NzBjYWViZTE5MzU1ODgwNDgifQ.eyJpc3MiOiJhY2NvdW50cy5nb29nbGUuY29tIiwiYXRfaGFzaCI6IktEYVV6UURjSkVHblNCWGFUQ0ZPM3ciLCJhdWQiOiI3MTQ0NjE5NjgzNjQtOHFsNWU1YWRkZmxxOGUwZmV1ZHNyNmszaHVtanA4N2QuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDE2MzI4MzI3MjcwMTE5OTkxNjMiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiYXpwIjoiNzE0NDYxOTY4MzY0LThxbDVlNWFkZGZscThlMGZldWRzcjZrM2h1bWpwODdkLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwiZW1haWwiOiJsYWRpY2xleHh4QGdtYWlsLmNvbSIsImlhdCI6MTQ1NTM4NTMyMCwiZXhwIjoxNDU1Mzg4OTIwfQ.C9PMktNLgVYDK3ndPbuxy5UDHTeKe41nmIkkJ0LnEPA4SBL9GXZT3iSZuW352ALbdx7y-kIBCiNliwuViVNmM22QEYPi9ZsowV2GE8c8vqaXPpA9c-8N_qHnzxMxKamy1lDr9Ut-Z_CN78CyWMld-2iuCILyY4NRxAYbgiQxd2Cu0LBxDRcVFdRSGf5KeA4VFixLUQmqxHAzjIKUANIrKglQRj3d1BFRrRk5yt02KXtoCuUQG3uyRFk7gRKTZuezgB2VkfFq5tmKhrseB-wEWEu9VT_5Z7yFllRVZ-isqHNACpNyoGZWaYiAcNDf0AHOhmz0_h_4rhZf7bTrv4_pnw");
+		gapi.client.load('oauth2', 'v2', function(){gapi.client.oauth2.userinfo.get().execute(function(resp){console.log(resp);});});
+
+        // すでに認証済みかの確認をする。
+        //window.setTimeout(checkAuth,1);
+}
+
+function checkAuth() {
+        // immediateをtrueで指定することで、未認証の場合、ただちにエラーが返り、
+        // handleAuthResultが呼び出される。
+        gapi.auth.authorize({client_id: clientId, scope: scopes, immediate: true}, handleAuthResult);
+}
+
+function handleAuthResult(authResult) {
+        var authorizeButton = document.getElementById('authorize-button');
+        if (authResult && !authResult.error) {
+          authorizeButton.style.visibility = 'hidden';
+          makeApiCall();
+        } else {
+          authorizeButton.style.visibility = '';
+          authorizeButton.onclick = handleAuthClick;
+        }
+}
+
+function handleAuthClick(event) {
+        // ここで、ポップアップ画面を表示して、OAuth認証を行う。
+        gapi.auth.authorize({client_id: clientId, scope: scopes, immediate: false}, handleAuthResult);
+        return false;
+			}
+		</script>
+		<script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
+	</head>
+	<body>
+		<button id="authorize-button" style="visibility: hidden">Authorize</button>
+		</body>
+</html>

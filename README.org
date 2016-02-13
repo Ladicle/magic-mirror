@@ -7,7 +7,13 @@
 ** Usage
    #+BEGIN_SRC shell
    npm install
+   npm start
+
+   cd gh-pages
+   npm install
    gulp
+
+   node io-socket/socket.js
    #+END_SRC
 
 ** Link
